@@ -45,9 +45,9 @@ let cards = [
 root.render(
 	<React.StrictMode>
 		<div className="card-container">
-			<Card card={cards[0]} />
-			<Card card={cards[1]} />
-			<Card card={cards[2]} />
+			{cards.map((el) => {
+				return <Card card={el} />;
+			})}
 		</div>
 	</React.StrictMode>
 );
